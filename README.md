@@ -1,5 +1,7 @@
 # HubregatorUi
 
+Hubgregator project integrates across smart home hubs such as Alexa, Google Assistant, SmartThings, Apple Homekit, Ring etc. to provide integration of events and automation across devices managed by each.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
 ## Development server
