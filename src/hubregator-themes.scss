@@ -1,0 +1,531 @@
+@import "~@angular/material/theming";
+
+$hubregator-typography: mat-typography-config(
+  $font-family: 'Quicksand, sans-serif',
+);
+
+@include mat-core($hubregator-typography);
+
+$mat-theme-ignore-duplication-warnings: true;
+
+$all-theme-warn: mat-palette($mat-red);
+
+@mixin adaptive-components($theme) {
+  $foreground: map-get($theme, foreground);
+  .adaptive-border {
+    border-color: map-get($foreground, dividers);
+  }
+}
+
+/**** RED THEME ****/
+$red-theme-primary: mat-palette($mat-red, 700, 500, 900);
+$red-theme-accent: mat-palette($mat-red, 200, 50, 400);
+$red-theme-light: mat-light-theme((
+  color: (
+    primary: $red-theme-primary,
+    accent: $red-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$red-theme-dark: mat-dark-theme((
+  color: (
+    primary: $red-theme-primary,
+    accent: $red-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.red-theme-light {
+  @include angular-material-theme($red-theme-light);
+  @include adaptive-components($red-theme-light);
+}
+.red-theme-dark {
+  @include angular-material-theme($red-theme-dark);
+  @include adaptive-components($red-theme-dark);
+}
+
+/**** PINK THEME ****/
+$pink-theme-primary: mat-palette($mat-pink, 700, 500, 900);
+$pink-theme-accent: mat-palette($mat-pink, 200, 50, 400);
+$pink-theme-light: mat-light-theme((
+  color: (
+    primary: $pink-theme-primary,
+    accent: $pink-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$pink-theme-dark: mat-dark-theme((
+  color: (
+    primary: $pink-theme-primary,
+    accent: $pink-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.pink-theme-light {
+  @include angular-material-theme($pink-theme-light);
+  @include adaptive-components($pink-theme-light);
+}
+.pink-theme-dark {
+  @include angular-material-theme($pink-theme-dark);
+  @include adaptive-components($pink-theme-dark);
+}
+
+/**** PURPLE THEME ****/
+$purple-theme-primary: mat-palette($mat-purple, 700, 500, 900);
+$purple-theme-accent: mat-palette($mat-purple, 200, 50, 400);
+$purple-theme-light: mat-light-theme((
+  color: (
+    primary: $purple-theme-primary,
+    accent: $purple-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$purple-theme-dark: mat-dark-theme((
+  color: (
+    primary: $purple-theme-primary,
+    accent: $purple-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.purple-theme-light {
+  @include angular-material-theme($purple-theme-light);
+  @include adaptive-components($purple-theme-light);
+}
+.purple-theme-dark {
+  @include angular-material-theme($purple-theme-dark);
+  @include adaptive-components($purple-theme-dark);
+}
+
+/**** DEEP PURPLE THEME ****/
+$deep-purple-theme-primary: mat-palette($mat-deep-purple, 700, 500, 900);
+$deep-purple-theme-accent: mat-palette($mat-deep-purple, 200, 50, 400);
+$deep-purple-theme-light: mat-light-theme((
+  color: (
+    primary: $deep-purple-theme-primary,
+    accent: $deep-purple-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$deep-purple-theme-dark: mat-dark-theme((
+  color: (
+    primary: $deep-purple-theme-primary,
+    accent: $deep-purple-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.deep-purple-theme-light {
+  @include angular-material-theme($deep-purple-theme-light);
+  @include adaptive-components($deep-purple-theme-light);
+}
+.deep-purple-theme-dark {
+  @include angular-material-theme($deep-purple-theme-dark);
+  @include adaptive-components($deep-purple-theme-dark);
+}
+
+/**** INDIGO THEME ****/
+$indigo-theme-primary: mat-palette($mat-indigo, 700, 500, 900);
+$indigo-theme-accent: mat-palette($mat-indigo, 200, 50, 400);
+$indigo-theme-light: mat-light-theme((
+  color: (
+    primary: $indigo-theme-primary,
+    accent: $indigo-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$indigo-theme-dark: mat-dark-theme((
+  color: (
+    primary: $indigo-theme-primary,
+    accent: $indigo-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.indigo-theme-light {
+  @include angular-material-theme($indigo-theme-light);
+  @include adaptive-components($indigo-theme-light);
+}
+.indigo-theme-dark {
+  @include angular-material-theme($indigo-theme-dark);
+  @include adaptive-components($indigo-theme-dark);
+}
+
+/**** BLUE THEME ****/
+$blue-theme-primary: mat-palette($mat-blue, 700, 500, 900);
+$blue-theme-accent: mat-palette($mat-blue, 200, 50, 400);
+$blue-theme-light: mat-light-theme((
+  color: (
+    primary: $blue-theme-primary,
+    accent: $blue-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$blue-theme-dark: mat-dark-theme((
+  color: (
+    primary: $blue-theme-primary,
+    accent: $blue-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.blue-theme-light {
+  @include angular-material-theme($blue-theme-light);
+  @include adaptive-components($blue-theme-light);
+}
+.blue-theme-dark {
+  @include angular-material-theme($blue-theme-dark);
+  @include adaptive-components($blue-theme-dark);
+}
+
+/**** LIGHT BLUE THEME ****/
+$light-blue-theme-primary: mat-palette($mat-light-blue, 700, 500, 900);
+$light-blue-theme-accent: mat-palette($mat-light-blue, 200, 50, 400);
+$light-blue-theme-light: mat-light-theme((
+  color: (
+    primary: $light-blue-theme-primary,
+    accent: $light-blue-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$light-blue-theme-dark: mat-dark-theme((
+  color: (
+    primary: $light-blue-theme-primary,
+    accent: $light-blue-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.light-blue-theme-light {
+  @include angular-material-theme($light-blue-theme-light);
+  @include adaptive-components($light-blue-theme-light);
+}
+.light-blue-theme-dark {
+  @include angular-material-theme($light-blue-theme-dark);
+  @include adaptive-components($light-blue-theme-dark);
+}
+
+/**** CYAN THEME ****/
+$cyan-theme-primary: mat-palette($mat-cyan, 700, 500, 900);
+$cyan-theme-accent: mat-palette($mat-cyan, 200, 50, 400);
+$cyan-theme-light: mat-light-theme((
+  color: (
+    primary: $cyan-theme-primary,
+    accent: $cyan-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$cyan-theme-dark: mat-dark-theme((
+  color: (
+    primary: $cyan-theme-primary,
+    accent: $cyan-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.cyan-theme-light {
+  @include angular-material-theme($cyan-theme-light);
+  @include adaptive-components($cyan-theme-light);
+}
+.cyan-theme-dark {
+  @include angular-material-theme($cyan-theme-dark);
+  @include adaptive-components($cyan-theme-dark);
+}
+
+/**** TEAL THEME ****/
+$teal-theme-primary: mat-palette($mat-teal, 700, 500, 900);
+$teal-theme-accent: mat-palette($mat-teal, 200, 50, 400);
+$teal-theme-light: mat-light-theme((
+  color: (
+    primary: $teal-theme-primary,
+    accent: $teal-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$teal-theme-dark: mat-dark-theme((
+  color: (
+    primary: $teal-theme-primary,
+    accent: $teal-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.teal-theme-light {
+  @include angular-material-theme($teal-theme-light);
+  @include adaptive-components($teal-theme-light);
+}
+.teal-theme-dark {
+  @include angular-material-theme($teal-theme-dark);
+  @include adaptive-components($teal-theme-dark);
+}
+
+/**** GREEN THEME ****/
+$green-theme-primary: mat-palette($mat-green, 700, 500, 900);
+$green-theme-accent: mat-palette($mat-green, 200, 50, 400);
+$green-theme-light: mat-light-theme((
+  color: (
+    primary: $green-theme-primary,
+    accent: $green-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$green-theme-dark: mat-dark-theme((
+  color: (
+    primary: $green-theme-primary,
+    accent: $green-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.green-theme-light {
+  @include angular-material-theme($green-theme-light);
+  @include adaptive-components($green-theme-light);
+}
+.green-theme-dark {
+  @include angular-material-theme($green-theme-dark);
+  @include adaptive-components($green-theme-dark);
+}
+
+/**** LIGHT GREEN THEME ****/
+$light-green-theme-primary: mat-palette($mat-light-green, 700, 500, 900);
+$light-green-theme-accent: mat-palette($mat-light-green, 200, 50, 400);
+$light-green-theme-light: mat-light-theme((
+  color: (
+    primary: $light-green-theme-primary,
+    accent: $light-green-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$light-green-theme-dark: mat-dark-theme((
+  color: (
+    primary: $light-green-theme-primary,
+    accent: $light-green-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.light-green-theme-light {
+  @include angular-material-theme($light-green-theme-light);
+  @include adaptive-components($light-green-theme-light);
+}
+.light-green-theme-dark {
+  @include angular-material-theme($light-green-theme-dark);
+  @include adaptive-components($light-green-theme-dark);
+}
+
+/**** LIME THEME ****/
+$lime-theme-primary: mat-palette($mat-lime, 700, 500, 900);
+$lime-theme-accent: mat-palette($mat-lime, 200, 50, 400);
+$lime-theme-light: mat-light-theme((
+  color: (
+    primary: $lime-theme-primary,
+    accent: $lime-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$lime-theme-dark: mat-dark-theme((
+  color: (
+    primary: $lime-theme-primary,
+    accent: $lime-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.lime-theme-light {
+  @include angular-material-theme($lime-theme-light);
+  @include adaptive-components($lime-theme-light);
+}
+.lime-theme-dark {
+  @include angular-material-theme($lime-theme-dark);
+  @include adaptive-components($lime-theme-dark);
+}
+
+/**** YELLOW THEME ****/
+$yellow-theme-primary: mat-palette($mat-yellow, 700, 500, 900);
+$yellow-theme-accent: mat-palette($mat-yellow, 200, 50, 400);
+$yellow-theme-light: mat-light-theme((
+  color: (
+    primary: $yellow-theme-primary,
+    accent: $yellow-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$yellow-theme-dark: mat-dark-theme((
+  color: (
+    primary: $yellow-theme-primary,
+    accent: $yellow-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.yellow-theme-light {
+  @include angular-material-theme($yellow-theme-light);
+  @include adaptive-components($yellow-theme-light);
+}
+.yellow-theme-dark {
+  @include angular-material-theme($yellow-theme-dark);
+  @include adaptive-components($yellow-theme-dark);
+}
+
+/**** AMBER THEME ****/
+$amber-theme-primary: mat-palette($mat-amber, 700, 500, 900);
+$amber-theme-accent: mat-palette($mat-amber, 200, 50, 400);
+$amber-theme-light: mat-light-theme((
+  color: (
+    primary: $amber-theme-primary,
+    accent: $amber-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$amber-theme-dark: mat-dark-theme((
+  color: (
+    primary: $amber-theme-primary,
+    accent: $amber-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.amber-theme-light {
+  @include angular-material-theme($amber-theme-light);
+  @include adaptive-components($amber-theme-light);
+}
+.amber-theme-dark {
+  @include angular-material-theme($amber-theme-dark);
+  @include adaptive-components($amber-theme-dark);
+}
+
+/**** ORANGE THEME ****/
+$orange-theme-primary: mat-palette($mat-orange, 700, 500, 900);
+$orange-theme-accent: mat-palette($mat-orange, 200, 50, 400);
+$orange-theme-light: mat-light-theme((
+  color: (
+    primary: $orange-theme-primary,
+    accent: $orange-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$orange-theme-dark: mat-dark-theme((
+  color: (
+    primary: $orange-theme-primary,
+    accent: $orange-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.orange-theme-light {
+  @include angular-material-theme($orange-theme-light);
+  @include adaptive-components($orange-theme-light);
+}
+.orange-theme-dark {
+  @include angular-material-theme($orange-theme-dark);
+  @include adaptive-components($orange-theme-dark);
+}
+
+/**** DEEP ORANGE THEME ****/
+$deep-orange-theme-primary: mat-palette($mat-deep-orange, 700, 500, 900);
+$deep-orange-theme-accent: mat-palette($mat-deep-orange, 200, 50, 400);
+$deep-orange-theme-light: mat-light-theme((
+  color: (
+    primary: $deep-orange-theme-primary,
+    accent: $deep-orange-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$deep-orange-theme-dark: mat-dark-theme((
+  color: (
+    primary: $deep-orange-theme-primary,
+    accent: $deep-orange-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.deep-orange-theme-light {
+  @include angular-material-theme($deep-orange-theme-light);
+  @include adaptive-components($deep-orange-theme-light);
+}
+.deep-orange-theme-dark {
+  @include angular-material-theme($deep-orange-theme-dark);
+  @include adaptive-components($deep-orange-theme-dark);
+}
+
+/**** BROWN THEME ****/
+$brown-theme-primary: mat-palette($mat-brown, 700, 500, 900);
+$brown-theme-accent: mat-palette($mat-brown, 200, 50, 400);
+$brown-theme-light: mat-light-theme((
+  color: (
+    primary: $brown-theme-primary,
+    accent: $brown-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$brown-theme-dark: mat-dark-theme((
+  color: (
+    primary: $brown-theme-primary,
+    accent: $brown-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.brown-theme-light {
+  @include angular-material-theme($brown-theme-light);
+  @include adaptive-components($brown-theme-light);
+}
+.brown-theme-dark {
+  @include angular-material-theme($brown-theme-dark);
+  @include adaptive-components($brown-theme-dark);
+}
+
+/**** GREY THEME ****/
+$grey-theme-primary: mat-palette($mat-grey, 700, 500, 900);
+$grey-theme-accent: mat-palette($mat-grey, 200, 50, 400);
+$grey-theme-light: mat-light-theme((
+  color: (
+    primary: $grey-theme-primary,
+    accent: $grey-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$grey-theme-dark: mat-dark-theme((
+  color: (
+    primary: $grey-theme-primary,
+    accent: $grey-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.grey-theme-light {
+  @include angular-material-theme($grey-theme-light);
+  @include adaptive-components($grey-theme-light);
+}
+.grey-theme-dark {
+  @include angular-material-theme($grey-theme-dark);
+  @include adaptive-components($grey-theme-dark);
+}
+
+/**** BLUE-GREY THEME ****/
+$blue-grey-theme-primary: mat-palette($mat-blue-grey, 700, 500, 900);
+$blue-grey-theme-accent: mat-palette($mat-blue-grey, 200, 50, 400);
+$blue-grey-theme-light: mat-light-theme((
+  color: (
+    primary: $blue-grey-theme-primary,
+    accent: $blue-grey-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+$blue-grey-theme-dark: mat-dark-theme((
+  color: (
+    primary: $blue-grey-theme-primary,
+    accent: $blue-grey-theme-accent,
+    warn: $all-theme-warn
+  )
+));
+
+.blue-grey-theme-light {
+  @include angular-material-theme($blue-grey-theme-light);
+  @include adaptive-components($blue-grey-theme-light);
+}
+.blue-grey-theme-dark {
+  @include angular-material-theme($blue-grey-theme-dark);
+  @include adaptive-components($blue-grey-theme-dark);
+}

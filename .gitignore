@@ -40,7 +40,11 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.firebaserc
 
 # System Files
 .DS_Store
 Thumbs.db
+
+# Application Configurations
+/deploy-configurations

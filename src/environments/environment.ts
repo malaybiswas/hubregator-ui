@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  name: 'development | production',
+  firebase: {
+    projectId: '<FIREBASE_PROJECT_ID>',
+    appId: '<FIREBASE_APP_ID>',
+    apiKey: '<GOOGLE_API_KEY>',
+    authDomain: 'localhost | <FIREBASE_PROJECT_ID>.firebaseapp.com | <FIREBASE_PROJECT_ID>.web.app',
+    databaseURL: 'https://<FIREBASE_PROJECT_ID>.firebaseio.com'
+  },
+  defaultPreferences: {
+    theme: {
+      color: 'red | pink | purple | deep-purple | indigo | blue | light-blue | cyan | teal | green | light-green | lime | yellow | amber | orange | deep-orange | brown | grey | blue-grey',
+      mode: 'light | dark | auto'
+    }
+  }
 };
 
 /*

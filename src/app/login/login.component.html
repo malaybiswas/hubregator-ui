@@ -1,0 +1,44 @@
+<div fxFlexFill fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <div mat-card-avatar class="hubregator-logo"></div>
+      <mat-card-title>Sign In</mat-card-title>
+      <mat-card-subtitle>With</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-action fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <mat-button-toggle-group #loginOptionGroup name="loginOption" aria-label="Login option">
+        <mat-button-toggle value="email">Email & Password</mat-button-toggle>
+        <mat-button-toggle value="phone">Phone</mat-button-toggle>
+        <mat-button-toggle value="google">Google Sign In</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-card-action>
+    <mat-card-content></mat-card-content>
+    <mat-card-content fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <div class="login-form-container adaptive-border">
+        <div class="content" fxLayout="row" fxLayoutAlign="center center" [@showHide]="viewStates.defaultPane">
+          <img src="../../assets/logo.jpg" width="100">
+        </div>
+        <div class="content" [@showHide]="viewStates.emailSignInPane" fxLayout="row" fxLayoutAlign="center center">
+          <form [formGroup]="emailSignInForm" fxLayout="column" fxLayoutAlign="center center">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="name@example.com" formControlName="email" required>
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error *ngIf="emailSignInForm.controls.email.touched && emailSignInForm.controls.email.invalid && emailSignInForm.controls.email.hasError('required')">Email is required</mat-error>
+              <mat-error *ngIf="emailSignInForm.controls.email.touched && emailSignInForm.controls.email.invalid && emailSignInForm.controls.email.hasError('email')">Email is not valid</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="name@example.com" formControlName="email" required>
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error *ngIf="emailSignInForm.controls.email.touched && emailSignInForm.controls.email.invalid && emailSignInForm.controls.email.hasError('required')">Email is required</mat-error>
+              <mat-error *ngIf="emailSignInForm.controls.email.touched && emailSignInForm.controls.email.invalid && emailSignInForm.controls.email.hasError('email')">Email is not valid</mat-error>
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="content" [@showHide]="viewStates.emailSignUpPane">Sign Up</div>
+        <div class="content" [@showHide]="viewStates.phoneSignInPane">Phone</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
